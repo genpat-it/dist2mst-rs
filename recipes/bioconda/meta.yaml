@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/genpat-it/dist2mst-rs/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: PLACEHOLDER - update after creating the v0.1.0 release tag
-  sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256: 1331fc3f46e60f27fba3c2213ed266e510f8abdc50a5b1f99f22410df671aa2d
 
 build:
   number: 0
