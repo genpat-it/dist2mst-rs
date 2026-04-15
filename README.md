@@ -3,6 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rust](https://img.shields.io/badge/rust-1.75+-orange.svg)](https://www.rust-lang.org/)
 [![GitHub release](https://img.shields.io/github/v/release/genpat-it/dist2mst-rs)](https://github.com/genpat-it/dist2mst-rs/releases)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/genpat-it/dist2mst-rs/rust.yml?label=CI)](https://github.com/genpat-it/dist2mst-rs/actions)
+[![Docker](https://img.shields.io/badge/docker-available-blue.svg)](https://github.com/genpat-it/dist2mst-rs/pkgs/container/dist2mst-rs)
+[![Bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg)](https://bioconda.github.io/recipes/dist2mst-rs/README.html)
+[![GitHub stars](https://img.shields.io/github/stars/genpat-it/dist2mst-rs)](https://github.com/genpat-it/dist2mst-rs/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/genpat-it/dist2mst-rs)](https://github.com/genpat-it/dist2mst-rs/issues)
 
 Ultra-fast Minimum Spanning Tree construction from symmetric distance matrices. Rust rewrite of [dist2mst](https://github.com/genpat-it/dist2mst) with **~900x speedup**.
 
@@ -38,6 +43,22 @@ Ultra-fast Minimum Spanning Tree construction from symmetric distance matrices. 
 
 ## Installation
 
+### Bioconda
+
+```bash
+conda install -c bioconda dist2mst-rs
+```
+
+### Docker
+
+```bash
+# Build
+docker build -t dist2mst .
+
+# Run
+docker run -v $(pwd):/data dist2mst /data/matrix.tsv /data/output.nwk
+```
+
 ### From source
 
 ```bash
@@ -47,9 +68,9 @@ RUSTFLAGS="-C target-cpu=native" cargo build --release
 # Binary at target/release/dist2mst
 ```
 
-### From releases
+### Pre-built binaries
 
-Download pre-built binaries from [Releases](https://github.com/genpat-it/dist2mst-rs/releases).
+Download from [Releases](https://github.com/genpat-it/dist2mst-rs/releases).
 
 ## Usage
 
