@@ -55,10 +55,10 @@ impl Tree {
 }
 
 /// Format distance matching Python's default float formatting.
+/// Python's f"{distance}" prints 4.0 as "4.0" and 5.5 as "5.5".
 fn write_distance(out: &mut String, dist: f64) {
     if dist == dist.floor() && dist.abs() < 1e15 {
-        // Integer-like: write without decimal (matching Python's f"{distance}")
-        out.push_str(&format!("{}", dist as i64));
+        out.push_str(&format!("{:.1}", dist));
     } else {
         out.push_str(&format!("{}", dist));
     }
