@@ -1,0 +1,20 @@
+[package]
+name = "dist2mst"
+version = "0.1.0"
+edition = "2021"
+description = "Ultra-fast Minimum Spanning Tree construction from distance matrices"
+license = "MIT"
+repository = "https://github.com/genpat-it/dist2mst-rs"
+authors = ["GenPat <genpat@izs.it>"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+rayon = "1"
+memmap2 = "0.9"
+uuid = { version = "1", features = ["v4"] }
+thiserror = "2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
